@@ -2,6 +2,10 @@
 @config "../tailwind.config.js";
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-primary text-gray-300 antialiased selection:bg-accent-cyan/30 selection:text-white;
   }

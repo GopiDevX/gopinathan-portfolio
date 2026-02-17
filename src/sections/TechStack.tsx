@@ -1,9 +1,10 @@
 import Section from "../components/Section";
-
+import { useRecruiterMode } from "../store/useRecruiterMode";
 
 import { SKILLS } from "../data";
 
 const TechStack = () => {
+    const { isRecruiterMode } = useRecruiterMode();
     return (
         <Section id="tech" className="relative">
             <div className="flex flex-col items-center">
@@ -17,7 +18,7 @@ const TechStack = () => {
                                 key={index}
                                 className="glass p-6 rounded-2xl hover:bg-white/5 transition-all duration-300 group"
                             >
-                                <div className="mb-4 p-3 bg-white/5 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300">
+                                <div className={`mb-4 p-3 bg-white/5 rounded-xl w-fit transition-transform duration-300 ${isRecruiterMode ? '' : 'group-hover:scale-110'}`}>
                                     <Icon className={`w-8 h-8 ${index === 0 ? "text-accent-cyan" :
                                         index === 1 ? "text-accent-purple" :
                                             index === 2 ? "text-accent-blue" : "text-white"

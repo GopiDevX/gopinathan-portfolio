@@ -165,20 +165,20 @@ export const CERTIFICATES = [
 export const CODING_PROFILES = [
     {
         platform: "LeetCode",
-        username: "GopiDevX",
-        url: "https://leetcode.com/GopiDevX/",
-        rating: "1500+",
+        username: "M_Gopinathan",
+        url: "https://leetcode.com/u/M_Gopinathan",
+        rating: "300+",
     },
     {
         platform: "GeeksforGeeks",
-        username: "gopinathan_m",
-        url: "https://auth.geeksforgeeks.org/user/gopinathan_m",
+        username: "gopinathanxe44",
+        url: "https://www.geeksforgeeks.org/profile/gopinathxe44",
         rating: "3 Stars",
     },
     {
         platform: "HackerRank",
-        username: "GopiDevX",
-        url: "https://www.hackerrank.com/GopiDevX",
+        username: "gopinathan1224",
+        url: "https://www.hackerrank.com/profile/gopinathan1224",
         rating: "5 Stars",
     },
 ];

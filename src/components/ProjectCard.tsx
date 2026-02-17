@@ -1,6 +1,7 @@
 import { type FC, type MouseEvent } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
+import { useRecruiterMode } from "../store/useRecruiterMode";
 
 interface ProjectProps {
     title: string;
@@ -12,6 +13,7 @@ interface ProjectProps {
 }
 
 const ProjectCard: FC<ProjectProps> = ({ title, description, tags, image, githubUrl, demoUrl }) => {
+    const { isRecruiterMode } = useRecruiterMode();
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
@@ -23,6 +25,7 @@ const ProjectCard: FC<ProjectProps> = ({ title, description, tags, image, github
     const springRotateY = useSpring(rotateY, springConfig);
 
     const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+        if (isRecruiterMode) return;
         const rect = e.currentTarget.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
@@ -44,12 +47,12 @@ const ProjectCard: FC<ProjectProps> = ({ title, description, tags, image, github
         >
             <motion.div
                 style={{
-                    rotateX: springRotateX,
-                    rotateY: springRotateY,
+                    rotateX: isRecruiterMode ? 0 : springRotateX,
+                    rotateY: isRecruiterMode ? 0 : springRotateY,
                 }}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
-                className="glass-card overflow-hidden group relative h-[450px] flex flex-col"
+                className={`glass-card overflow-hidden group relative h-[450px] flex flex-col ${isRecruiterMode ? '' : 'hover:border-accent-cyan/50'}`}
             >
                 {/* Project Image Area */}
                 <div className="h-48 overflow-hidden relative">
@@ -57,7 +60,7 @@ const ProjectCard: FC<ProjectProps> = ({ title, description, tags, image, github
                     <img
                         src={image}
                         alt={title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className={`w-full h-full object-cover transition-transform duration-500 ${isRecruiterMode ? '' : 'group-hover:scale-110'}`}
                     />
                 </div>
 

@@ -11,7 +11,7 @@ const Hero = () => {
         <Section id="home" className="relative pt-32 overflow-hidden bg-transparent">
             <div className="z-10 relative pointer-events-none">
                 {/* Ensure content is clickable */}
-                <div className="pointer-events-auto">
+                <div className="pointer-events-auto md:pl-20">
                     <h1 className="font-bold mb-6 leading-tight">
                         <span className="block text-base md:text-lg text-accent-cyan mb-2 font-mono">{HERO_CONTENT.greeting}</span>
                         <span className="block text-3xl md:text-5xl text-white mb-4 tracking-tight">{HERO_CONTENT.name}</span>
