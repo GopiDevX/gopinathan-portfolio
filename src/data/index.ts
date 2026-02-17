@@ -4,7 +4,8 @@ import { Github, Linkedin, Mail } from "lucide-react";
 export const NAV_LINKS = [
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
-    { name: "Tech Stack", href: "#tech" },
+    { name: "Certificates", href: "#certificates" },
+    { name: "Profiles", href: "#coding-profiles" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -139,3 +140,45 @@ export const CONTACT_INFO = {
         },
     ],
 };
+
+export const CERTIFICATES = [
+    {
+        name: "Java Full Stack Development",
+        issuer: "Infosys Springboard",
+        date: "2024",
+        link: "#",
+    },
+    {
+        name: "React - The Complete Guide",
+        issuer: "Udemy",
+        date: "2023",
+        link: "#",
+    },
+    {
+        name: "Machine Learning A-Z",
+        issuer: "Coursera",
+        date: "2023",
+        link: "#",
+    },
+];
+
+export const CODING_PROFILES = [
+    {
+        platform: "LeetCode",
+        username: "GopiDevX",
+        url: "https://leetcode.com/GopiDevX/",
+        rating: "1500+",
+    },
+    {
+        platform: "GeeksforGeeks",
+        username: "gopinathan_m",
+        url: "https://auth.geeksforgeeks.org/user/gopinathan_m",
+        rating: "3 Stars",
+    },
+    {
+        platform: "HackerRank",
+        username: "GopiDevX",
+        url: "https://www.hackerrank.com/GopiDevX",
+        rating: "5 Stars",
+    },
+];

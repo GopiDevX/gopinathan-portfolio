@@ -5,6 +5,8 @@ import TechStack from "./sections/TechStack";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
+import Certificates from "./sections/Certificates";
+import CodingProfiles from "./sections/CodingProfiles";
 import { useRecruiterMode } from "./store/useRecruiterMode";
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
         <About />
         <TechStack />
         <Projects />
+        <Certificates />
+        <CodingProfiles />
         <Experience />
         <Contact />
       </main>
