@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -10,12 +11,16 @@ import CodingProfiles from "./sections/CodingProfiles";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
+import LoadingScreen from "./components/LoadingScreen";
 import { useRecruiterMode } from "./store/useRecruiterMode";
 
 function App() {
   const { isRecruiterMode } = useRecruiterMode();
+  const [isLoading, setIsLoading] = useState(!isRecruiterMode);
+
   return (
     <>
+      {!isRecruiterMode && isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
       <ScrollProgress />
       <div className={`fixed inset-0 z-[-1] bg-primary transition-colors duration-500 ${isRecruiterMode ? 'bg-[#0a0a0a]' : ''}`}>
         {!isRecruiterMode && (
@@ -26,21 +31,22 @@ function App() {
         )}
       </div>
 
-      <Navbar />
+      <div className={`relative ${isLoading && !isRecruiterMode ? 'h-screen overflow-hidden' : ''}`}>
+        <Navbar />
+        <main className="container mx-auto px-6 overflow-x-hidden">
+          <Hero />
+          <About />
+          <TechStack />
+          <Projects />
+          <Certificates />
+          <CodingProfiles />
+          <Experience />
+          <Contact />
+        </main>
 
-      <main>
-        <Hero />
-        <About />
-        <TechStack />
-        <Projects />
-        <Certificates />
-        <CodingProfiles />
-        <Experience />
-        <Contact />
-      </main>
-
-      <Footer />
-      <BackToTop />
+        <Footer />
+        <BackToTop />
+      </div>
     </>
   );
 }

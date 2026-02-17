@@ -7,7 +7,40 @@
   }
 
   body {
-    @apply bg-primary text-gray-300 antialiased selection:bg-accent-cyan/30 selection:text-white;
+    @apply bg-primary text-gray-300 antialiased selection:bg-accent-purple/30 selection:text-white;
+  }
+
+  @keyframes blink {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes progress {
+    0% {
+      width: 0%;
+      transform: translateX(-100%);
+    }
+
+    50% {
+      width: 100%;
+      transform: translateX(0);
+    }
+
+    100% {
+      width: 100%;
+      transform: translateX(100%);
+    }
   }
 }
 
