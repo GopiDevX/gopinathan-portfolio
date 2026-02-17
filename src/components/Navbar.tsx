@@ -38,6 +38,14 @@ const Navbar = () => {
                             {link.name}
                         </a>
                     ))}
+                    <a
+                        href="/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 text-sm font-medium text-white bg-white/10 border border-white/10 rounded-full hover:bg-white/20 transition-all duration-300"
+                    >
+                        Resume
+                    </a>
                     <RecruiterToggle />
                 </div>
 
@@ -67,6 +75,15 @@ const Navbar = () => {
                                 {link.name}
                             </a>
                         ))}
+                        <a
+                            href="/resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-accent-cyan hover:text-cyan-300 block py-2 font-medium"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            Download Resume
+                        </a>
                     </div>
                 </div>
             )}

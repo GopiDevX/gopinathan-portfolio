@@ -143,24 +143,57 @@ export const CONTACT_INFO = {
 
 export const CERTIFICATES = [
     {
-        name: "Java Full Stack Development",
-        issuer: "Infosys Springboard",
+        name: "Problem Solving (Intermediate)",
+        issuer: "HackerRank",
         date: "2024",
         link: "#",
+        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z", // Placeholder or real if available
     },
     {
-        name: "React - The Complete Guide",
-        issuer: "Udemy",
-        date: "2023",
+        name: "Java (Intermediate)",
+        issuer: "HackerRank",
+        date: "2024",
         link: "#",
+        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
     },
     {
-        name: "Machine Learning A-Z",
-        issuer: "Coursera",
+        name: "SQL (Basic)",
+        issuer: "HackerRank",
+        date: "2024",
+        link: "#",
+        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
+    },
+    {
+        name: "Cloud Computing",
+        issuer: "NPTEL",
+        date: "2024",
+        link: "#",
+        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
+    },
+    {
+        name: "Practical Cyber Security Practitioners",
+        issuer: "NPTEL",
+        date: "2024",
+        link: "#",
+        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
+    },
+    {
+        name: "Red Hat AI Foundations",
+        issuer: "Red Hat",
+        date: "2024",
+        link: "#",
+        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
+    },
+    {
+        name: "EF SET English Certificate (C2 Proficient)",
+        issuer: "EF Standard English Test",
         date: "2023",
         link: "#",
+        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
     },
 ];
+
+import { LeetCodeIcon, GeeksForGeeksIcon, HackerRankIcon } from "../components/Icons";
 
 export const CODING_PROFILES = [
     {
@@ -168,17 +201,23 @@ export const CODING_PROFILES = [
         username: "M_Gopinathan",
         url: "https://leetcode.com/u/M_Gopinathan",
         rating: "300+",
+        icon: LeetCodeIcon,
+        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
     },
     {
         platform: "GeeksforGeeks",
         username: "gopinathanxe44",
         url: "https://www.geeksforgeeks.org/profile/gopinathxe44",
         rating: "3 Stars",
+        icon: GeeksForGeeksIcon,
+        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
     },
     {
         platform: "HackerRank",
         username: "gopinathan1224",
         url: "https://www.hackerrank.com/profile/gopinathan1224",
         rating: "5 Stars",
+        icon: HackerRankIcon,
+        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
     },
 ];

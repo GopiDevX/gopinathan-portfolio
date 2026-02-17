@@ -31,10 +31,12 @@ const Hero = () => {
                             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                         </a>
                         <a
-                            href="#contact"
+                            href="/resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="px-8 py-3 glass hover:bg-white/10 rounded-full text-white transition-all duration-300"
                         >
-                            {HERO_CONTENT.cta.secondary}
+                            Download Resume
                         </a>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ const Projects = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
                 Featured Work
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {PROJECTS.map((project, index) => (
                     <ProjectCard key={index} {...project} />
                 ))}

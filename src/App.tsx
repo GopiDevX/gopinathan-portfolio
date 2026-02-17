@@ -7,12 +7,16 @@ import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 import Certificates from "./sections/Certificates";
 import CodingProfiles from "./sections/CodingProfiles";
+import Footer from "./components/Footer";
+import ScrollProgress from "./components/ScrollProgress";
+import BackToTop from "./components/BackToTop";
 import { useRecruiterMode } from "./store/useRecruiterMode";
 
 function App() {
   const { isRecruiterMode } = useRecruiterMode();
   return (
     <>
+      <ScrollProgress />
       <div className={`fixed inset-0 z-[-1] bg-primary transition-colors duration-500 ${isRecruiterMode ? 'bg-[#0a0a0a]' : ''}`}>
         {!isRecruiterMode && (
           <>
@@ -35,9 +39,8 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="py-8 text-center text-gray-500 text-sm glass mt-20">
-        <p>&copy; {new Date().getFullYear()} Portfolio. Built with React, Tailwind & Three.js.</p>
-      </footer>
+      <Footer />
+      <BackToTop />
     </>
   );
 }
