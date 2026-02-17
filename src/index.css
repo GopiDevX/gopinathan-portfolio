@@ -44,6 +44,13 @@
   }
 }
 
+@layer utilities {
+  .mask-gradient {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+}
+
 @layer components {
   .glass {
     @apply bg-white/5 backdrop-blur-lg border border-white/10;

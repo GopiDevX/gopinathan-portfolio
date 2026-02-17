@@ -8,11 +8,15 @@ interface ProjectProps {
     image: string;
     githubUrl?: string;
     demoUrl?: string;
+    onClick?: () => void;
 }
 
-const ProjectCard: FC<ProjectProps> = ({ title, description, tags, image, githubUrl, demoUrl }) => {
+const ProjectCard: FC<ProjectProps> = ({ title, description, tags, image, githubUrl, demoUrl, onClick }) => {
     return (
-        <div className="glass-card overflow-hidden group flex flex-col h-full hover:border-accent-cyan/50 transition-colors duration-300">
+        <div
+            onClick={onClick}
+            className="glass-card overflow-hidden group flex flex-col h-full hover:border-accent-cyan/50 transition-colors duration-300 cursor-pointer"
+        >
             {/* Project Image Area */}
             <div className="relative h-48 overflow-hidden bg-black/50">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent z-10" />

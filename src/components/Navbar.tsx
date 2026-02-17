@@ -6,16 +6,31 @@ import RecruiterToggle from "./RecruiterToggle";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState("home");
 
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
         };
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll("section[id]").forEach(section => {
+            observer.observe(section);
+        });
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            observer.disconnect();
+        };
     }, []);
-
-
 
     return (
         <nav
@@ -33,7 +48,12 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="nav-link"
+                            className={`nav-link ${activeSection === link.href.substring(1) ? "text-accent-cyan after:w-full" : ""}`}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                                setActiveSection(link.href.substring(1));
+                            }}
                         >
                             {link.name}
                         </a>
