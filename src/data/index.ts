@@ -26,7 +26,7 @@ export const ABOUT_CONTENT = {
     description:
         "I am a Computer Science Engineering student and Java Full Stack Developer passionate about building secure, scalable, and intelligent web applications. My expertise includes backend development with Spring Boot, frontend development using React, and integrating Machine Learning models into full-stack systems. I am continuously improving my Data Structures & Algorithms skills while preparing for product-based company roles.",
     stats: [
-        { label: "Internships", value: "1+" },
+        { label: "Internships", value: "2+" },
         { label: "Full Stack Projects", value: "3+" },
         { label: "Technologies Worked With", value: "15+" },
     ],
@@ -202,7 +202,7 @@ export const CODING_PROFILES = [
         url: "https://leetcode.com/u/M_Gopinathan",
         rating: "300+",
         icon: LeetCodeIcon,
-        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
+        image: "/assets/leetcode_preview.png",
     },
     {
         platform: "GeeksforGeeks",
@@ -218,6 +218,6 @@ export const CODING_PROFILES = [
         url: "https://www.hackerrank.com/profile/gopinathan1224",
         rating: "5 Stars",
         icon: HackerRankIcon,
-        image: "https://media.licdn.com/dms/image/D562DAQFj-2t4q1iKjg/profile-treasury-image-shrink_800_800/0/1721838848419?e=1727373600&v=beta&t=7yH6F6s8K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z6K6z",
+        image: "/assets/hackerrank_preview.png",
     },
 ];
